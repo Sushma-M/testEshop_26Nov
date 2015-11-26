@@ -5,6 +5,7 @@
 		"operation": "gotoPage",
 		"pageName": "Main",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1389180517517"
 	},
@@ -29,6 +30,7 @@
 		"operation": "gotoPage",
 		"pageName": "Admin",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1389140514517"
 	},
@@ -38,6 +40,7 @@
 		"operation": "gotoPage",
 		"pageName": "Category",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1394629102518"
 	},
@@ -47,6 +50,7 @@
 		"operation": "gotoPage",
 		"pageName": "Cart",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1394629124977"
 	},
@@ -100,6 +104,7 @@
 		"operation": "gotoPage",
 		"pageName": "Products",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1394788273156"
 	},
@@ -139,6 +144,7 @@
 		"operation": "gotoPage",
 		"pageName": "Orders",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1395224514305"
 	},
@@ -148,6 +154,7 @@
 		"operation": "gotoPage",
 		"pageName": "Profile",
 		"dataBinding": {},
+		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-wm.NavigationVariable1395224557034"
 	},
@@ -262,8 +269,8 @@
 		"firstRow": 0,
 		"maxResults": 20,
 		"designMaxResults": 10,
-		"operation": "getUserId",
 		"service": "securityService",
+		"operation": "getUserId",
 		"startUpdate": true,
 		"autoUpdate": false,
 		"inFlightBehavior": "executeLast",
@@ -272,12 +279,12 @@
 		"serviceType": "SecurityServiceType",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-wm.ServiceVariable1406724552127",
-        "wmServiceOperationInfo": {
-            "methodType": "get",
-            "name": "getUserId",
-            "relativePath": "/security/user/userid",
-            "parameters": []
-        }
+		"wmServiceOperationInfo": {
+			"methodType": "get",
+			"name": "getUserId",
+			"relativePath": "/security/user/userid",
+			"parameters": []
+		}
 	},
 	"cartInsert": {
 		"name": "cartInsert",
@@ -337,6 +344,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -344,25 +352,29 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
-					"fieldName": "product",
+					"fieldName": "productId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "productId",
+					"columnName": "PRODUCT_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "PRODUCT",
 					"relatedEntityName": "Product",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -370,11 +382,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "imgUrl",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "IMG_URL",
 							"isPrimaryKey": false,
@@ -382,11 +396,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "category",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "CATEGORY",
 							"isPrimaryKey": false,
@@ -394,11 +410,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "price",
 							"type": "double",
+							"hibernateType": null,
 							"fullyQualifiedType": "double",
 							"columnName": "PRICE",
 							"isPrimaryKey": false,
@@ -406,11 +424,13 @@
 							"length": 255,
 							"precision": 64,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "description",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "DESCRIPTION",
 							"isPrimaryKey": false,
@@ -418,11 +438,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "name",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "NAME",
 							"isPrimaryKey": false,
@@ -430,11 +452,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "availability",
 							"type": "boolean",
+							"hibernateType": null,
 							"fullyQualifiedType": "boolean",
 							"columnName": "AVAILABILITY",
 							"isPrimaryKey": false,
@@ -442,14 +466,16 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "productId.id"
 				},
 				{
 					"fieldName": "status",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "STATUS",
 					"isPrimaryKey": false,
@@ -457,25 +483,29 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
-					"fieldName": "user",
+					"fieldName": "userId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "userId",
+					"columnName": "USER_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "USER",
 					"relatedEntityName": "User",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -483,11 +513,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "landmark",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "LANDMARK",
 							"isPrimaryKey": false,
@@ -495,11 +527,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "phone",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PHONE",
 							"isPrimaryKey": false,
@@ -507,11 +541,13 @@
 							"length": 15,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "pin",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PIN",
 							"isPrimaryKey": false,
@@ -519,11 +555,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "email",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "EMAIL",
 							"isPrimaryKey": false,
@@ -531,11 +569,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "street",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "STREET",
 							"isPrimaryKey": false,
@@ -543,11 +583,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "name",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "NAME",
 							"isPrimaryKey": false,
@@ -555,11 +597,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "productBought",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PRODUCT_BOUGHT",
 							"isPrimaryKey": false,
@@ -567,11 +611,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "password",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PASSWORD",
 							"isPrimaryKey": false,
@@ -579,11 +625,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "country",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "COUNTRY",
 							"isPrimaryKey": false,
@@ -591,11 +639,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "city",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "CITY",
 							"isPrimaryKey": false,
@@ -603,14 +653,16 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "userId.id"
 				},
 				{
 					"fieldName": "quantity",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "QUANTITY",
 					"isPrimaryKey": false,
@@ -618,12 +670,18 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "Itemorder",
-			"fullyQualifiedName": "com.eshopping.Itemorder"
-		}
+			"fullyQualifiedName": "com.eshopping.Itemorder",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	},
 	"users": {
 		"name": "users",
@@ -669,6 +727,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -676,11 +735,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "landmark",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "LANDMARK",
 					"isPrimaryKey": false,
@@ -688,11 +749,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "phone",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PHONE",
 					"isPrimaryKey": false,
@@ -700,11 +763,13 @@
 					"length": 15,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "pin",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PIN",
 					"isPrimaryKey": false,
@@ -712,11 +777,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "email",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "EMAIL",
 					"isPrimaryKey": false,
@@ -724,11 +791,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "street",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "STREET",
 					"isPrimaryKey": false,
@@ -736,11 +805,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "name",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "NAME",
 					"isPrimaryKey": false,
@@ -748,11 +819,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "productBought",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PRODUCT_BOUGHT",
 					"isPrimaryKey": false,
@@ -760,11 +833,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "password",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PASSWORD",
 					"isPrimaryKey": false,
@@ -772,11 +847,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "country",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "COUNTRY",
 					"isPrimaryKey": false,
@@ -784,11 +861,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "city",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "CITY",
 					"isPrimaryKey": false,
@@ -796,12 +875,18 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "User",
-			"fullyQualifiedName": "com.eshopping.User"
-		}
+			"fullyQualifiedName": "com.eshopping.User",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	},
 	"EshoppingItemorderData": {
 		"name": "EshoppingItemorderData",
@@ -853,6 +938,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -860,25 +946,29 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
-					"fieldName": "product",
+					"fieldName": "productId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "productId",
+					"columnName": "PRODUCT_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "PRODUCT",
 					"relatedEntityName": "Product",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -886,11 +976,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "imgUrl",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "IMG_URL",
 							"isPrimaryKey": false,
@@ -898,11 +990,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "category",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "CATEGORY",
 							"isPrimaryKey": false,
@@ -910,11 +1004,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "price",
 							"type": "double",
+							"hibernateType": null,
 							"fullyQualifiedType": "double",
 							"columnName": "PRICE",
 							"isPrimaryKey": false,
@@ -922,11 +1018,13 @@
 							"length": 255,
 							"precision": 64,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "description",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "DESCRIPTION",
 							"isPrimaryKey": false,
@@ -934,11 +1032,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "name",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "NAME",
 							"isPrimaryKey": false,
@@ -946,11 +1046,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "availability",
 							"type": "boolean",
+							"hibernateType": null,
 							"fullyQualifiedType": "boolean",
 							"columnName": "AVAILABILITY",
 							"isPrimaryKey": false,
@@ -958,14 +1060,16 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "productId.id"
 				},
 				{
 					"fieldName": "status",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "STATUS",
 					"isPrimaryKey": false,
@@ -973,25 +1077,29 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
-					"fieldName": "user",
+					"fieldName": "userId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "userId",
+					"columnName": "USER_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "USER",
 					"relatedEntityName": "User",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -999,11 +1107,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "landmark",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "LANDMARK",
 							"isPrimaryKey": false,
@@ -1011,11 +1121,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "phone",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PHONE",
 							"isPrimaryKey": false,
@@ -1023,11 +1135,13 @@
 							"length": 15,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "pin",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PIN",
 							"isPrimaryKey": false,
@@ -1035,11 +1149,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "email",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "EMAIL",
 							"isPrimaryKey": false,
@@ -1047,11 +1163,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "street",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "STREET",
 							"isPrimaryKey": false,
@@ -1059,11 +1177,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "name",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "NAME",
 							"isPrimaryKey": false,
@@ -1071,11 +1191,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "productBought",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PRODUCT_BOUGHT",
 							"isPrimaryKey": false,
@@ -1083,11 +1205,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "password",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PASSWORD",
 							"isPrimaryKey": false,
@@ -1095,11 +1219,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "country",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "COUNTRY",
 							"isPrimaryKey": false,
@@ -1107,11 +1233,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "city",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "CITY",
 							"isPrimaryKey": false,
@@ -1119,14 +1247,16 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "userId.id"
 				},
 				{
 					"fieldName": "quantity",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "QUANTITY",
 					"isPrimaryKey": false,
@@ -1134,12 +1264,18 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "Itemorder",
-			"fullyQualifiedName": "com.eshopping.Itemorder"
-		}
+			"fullyQualifiedName": "com.eshopping.Itemorder",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	},
 	"EshoppingProductData": {
 		"name": "EshoppingProductData",
@@ -1171,6 +1307,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -1178,11 +1315,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "imgUrl",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "IMG_URL",
 					"isPrimaryKey": false,
@@ -1190,11 +1329,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "category",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "CATEGORY",
 					"isPrimaryKey": false,
@@ -1202,11 +1343,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "price",
 					"type": "double",
+					"hibernateType": null,
 					"fullyQualifiedType": "double",
 					"columnName": "PRICE",
 					"isPrimaryKey": false,
@@ -1214,11 +1357,13 @@
 					"length": 255,
 					"precision": 64,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "description",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "DESCRIPTION",
 					"isPrimaryKey": false,
@@ -1226,11 +1371,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "name",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "NAME",
 					"isPrimaryKey": false,
@@ -1238,11 +1385,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "availability",
 					"type": "boolean",
+					"hibernateType": null,
 					"fullyQualifiedType": "boolean",
 					"columnName": "AVAILABILITY",
 					"isPrimaryKey": false,
@@ -1250,12 +1399,18 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "Product",
-			"fullyQualifiedName": "com.eshopping.Product"
-		}
+			"fullyQualifiedName": "com.eshopping.Product",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	},
 	"EshoppingUserData": {
 		"name": "EshoppingUserData",
@@ -1287,6 +1442,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -1294,11 +1450,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "landmark",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "LANDMARK",
 					"isPrimaryKey": false,
@@ -1306,11 +1464,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "phone",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PHONE",
 					"isPrimaryKey": false,
@@ -1318,11 +1478,13 @@
 					"length": 15,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "pin",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PIN",
 					"isPrimaryKey": false,
@@ -1330,11 +1492,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "email",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "EMAIL",
 					"isPrimaryKey": false,
@@ -1342,11 +1506,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "street",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "STREET",
 					"isPrimaryKey": false,
@@ -1354,11 +1520,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "name",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "NAME",
 					"isPrimaryKey": false,
@@ -1366,11 +1534,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "productBought",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PRODUCT_BOUGHT",
 					"isPrimaryKey": false,
@@ -1378,11 +1548,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "password",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "PASSWORD",
 					"isPrimaryKey": false,
@@ -1390,11 +1562,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "country",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "COUNTRY",
 					"isPrimaryKey": false,
@@ -1402,11 +1576,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "city",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "CITY",
 					"isPrimaryKey": false,
@@ -1414,12 +1590,18 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "User",
-			"fullyQualifiedName": "com.eshopping.User"
-		}
+			"fullyQualifiedName": "com.eshopping.User",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	},
 	"EshoppingProductorderData": {
 		"name": "EshoppingProductorderData",
@@ -1463,6 +1645,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -1470,11 +1653,13 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
 					"fieldName": "status",
 					"type": "string",
+					"hibernateType": null,
 					"fullyQualifiedType": "string",
 					"columnName": "STATUS",
 					"isPrimaryKey": false,
@@ -1482,25 +1667,29 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
-					"fieldName": "user",
+					"fieldName": "userId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "userId",
+					"columnName": "USER_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "USER",
 					"relatedEntityName": "User",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -1508,11 +1697,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "landmark",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "LANDMARK",
 							"isPrimaryKey": false,
@@ -1520,11 +1711,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "phone",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PHONE",
 							"isPrimaryKey": false,
@@ -1532,11 +1725,13 @@
 							"length": 15,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "pin",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PIN",
 							"isPrimaryKey": false,
@@ -1544,11 +1739,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "email",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "EMAIL",
 							"isPrimaryKey": false,
@@ -1556,11 +1753,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "street",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "STREET",
 							"isPrimaryKey": false,
@@ -1568,11 +1767,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "name",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "NAME",
 							"isPrimaryKey": false,
@@ -1580,11 +1781,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "productBought",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PRODUCT_BOUGHT",
 							"isPrimaryKey": false,
@@ -1592,11 +1795,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "password",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "PASSWORD",
 							"isPrimaryKey": false,
@@ -1604,11 +1809,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "country",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "COUNTRY",
 							"isPrimaryKey": false,
@@ -1616,11 +1823,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "city",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "CITY",
 							"isPrimaryKey": false,
@@ -1628,15 +1837,21 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "userId.id"
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "Productorder",
-			"fullyQualifiedName": "com.eshopping.Productorder"
-		}
+			"fullyQualifiedName": "com.eshopping.Productorder",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	},
 	"EshoppingOrderdetailData": {
 		"name": "EshoppingOrderdetailData",
@@ -1688,6 +1903,7 @@
 				{
 					"fieldName": "id",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "ID",
 					"isPrimaryKey": true,
@@ -1695,25 +1911,29 @@
 					"length": 255,
 					"precision": 19,
 					"generator": "identity",
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				},
 				{
-					"fieldName": "productorder",
+					"fieldName": "orderId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "orderId",
+					"columnName": "ORDER_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "PRODUCTORDER",
 					"relatedEntityName": "Productorder",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -1721,11 +1941,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "status",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "STATUS",
 							"isPrimaryKey": false,
@@ -1733,11 +1955,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "userId",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "USER_ID",
 							"isPrimaryKey": false,
@@ -1745,28 +1969,32 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": true
+							"isRelated": true,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "orderId.id"
 				},
 				{
-					"fieldName": "product",
+					"fieldName": "productId",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
-					"columnName": "productId",
+					"columnName": "PRODUCT_ID",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
 					"isRelated": true,
+					"defaultValue": null,
 					"relatedTableName": "PRODUCT",
 					"relatedEntityName": "Product",
 					"columns": [
 						{
 							"fieldName": "id",
 							"type": "integer",
+							"hibernateType": null,
 							"fullyQualifiedType": "integer",
 							"columnName": "ID",
 							"isPrimaryKey": true,
@@ -1774,11 +2002,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": "identity",
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "imgUrl",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "IMG_URL",
 							"isPrimaryKey": false,
@@ -1786,11 +2016,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "category",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "CATEGORY",
 							"isPrimaryKey": false,
@@ -1798,11 +2030,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "price",
 							"type": "double",
+							"hibernateType": null,
 							"fullyQualifiedType": "double",
 							"columnName": "PRICE",
 							"isPrimaryKey": false,
@@ -1810,11 +2044,13 @@
 							"length": 255,
 							"precision": 64,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "description",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "DESCRIPTION",
 							"isPrimaryKey": false,
@@ -1822,11 +2058,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "name",
 							"type": "string",
+							"hibernateType": null,
 							"fullyQualifiedType": "string",
 							"columnName": "NAME",
 							"isPrimaryKey": false,
@@ -1834,11 +2072,13 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						},
 						{
 							"fieldName": "availability",
 							"type": "boolean",
+							"hibernateType": null,
 							"fullyQualifiedType": "boolean",
 							"columnName": "AVAILABILITY",
 							"isPrimaryKey": false,
@@ -1846,14 +2086,16 @@
 							"length": 255,
 							"precision": 19,
 							"generator": null,
-							"isRelated": false
+							"isRelated": false,
+							"defaultValue": null
 						}
 					],
-					"isList": false
+					"relatedFieldName": "productId.id"
 				},
 				{
 					"fieldName": "quantity",
 					"type": "integer",
+					"hibernateType": null,
 					"fullyQualifiedType": "integer",
 					"columnName": "QUANTITY",
 					"isPrimaryKey": false,
@@ -1861,11 +2103,17 @@
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
+			"primaryKeys": [
+				"id"
+			],
 			"entityName": "Orderdetail",
-			"fullyQualifiedName": "com.eshopping.Orderdetail"
-		}
+			"fullyQualifiedName": "com.eshopping.Orderdetail",
+			"tableType": "TABLE"
+		},
+		"tableType": "TABLE"
 	}
 }
